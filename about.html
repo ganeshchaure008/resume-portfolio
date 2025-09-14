@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #00eaff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0,234,255,0.7);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: #00eaff;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #00eaff;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #ccc;
+      font-weight: 400;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,234,255,0.4);
+    }
+
+    .card h4 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      color: #00eaff;
+      border-left: 4px solid #00eaff;
+      padding-left: 10px;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .card p, .card li {
+      color: #ddd;
+    }
+
+    .download-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(90deg, #00eaff, #007bff);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,234,255,0.5);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 15px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <h1>Ganesh Chaure</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about">
+    <h2>Get To Know More</h2>
+    <h3>About Me</h3>
+
+    <div class="cards">
+      <div class="card">
+        <h4>About Me</h4>
+        <p>
+          Motivated and detail-oriented Computer Science graduate with strong knowledge of Java, Spring Boot, MySQL, and web development. Skilled in problem-solving, database management, and building real-world applications. A quick learner with the ability to adapt to new technologies and deliver results in both independent and collaborative environments.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Contact</h4>
+        <p>📞 +91 93713 49368</p>
+        <p>📧 chaureganesh518@gmail.com</p>
+        <p>📍 Hyderabad, Telangana</p>
+      </div>
+
+      <div class="card">
+        <h4>Skills</h4>
+        <ul>
+          <li>Core & Advanced Java</li>
+          <li>Spring Boot & MySQL</li>
+          <li>Web Development (HTML, CSS, JavaScript)</li>
+          <li>Problem Solving & OOP Concepts</li>
+          <li>Git & Version Control</li>
+          <li>Database Management</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Languages</h4>
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Marathi</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Education</h4>
+        <p><strong>(2022 – 2025)</strong><br>Savitribai Phule Pune University<br>Bachelor of Computer Science (BCS)<br>CGPA: 8.25</p>
+        <p><strong>(2020 – 2022)</strong><br>Junior College (Science)<br>Percentage: 60.33</p>
+        <p><strong>(2019 – 2020)</strong><br>SSC – Secondary School Certificate<br>Percentage: 72.80</p>
+      </div>
+
+      <div class="card">
+        <h4>Experience / Projects</h4>
+        <h5>FRESHER</h5>
+        <p><strong>(2024 – 2025)</strong><br>Real Estate Management System – Java Spring Boot Project</p>
+        <ul>
+          <li>Developed modules for Employee, Supplier, and Product Management.</li>
+          <li>Designed and implemented bill generator across all modules.</li>
+          <li>Used Spring Boot (70%) and HTML/CSS (30%) with MySQL database.</li>
+        </ul>
+        <p><strong>(2023 – 2024)</strong><br>Food Delivery Application (Java)</p>
+        <ul>
+          <li>Built using Core Java with OOP concepts and Scanner-based test cases.</li>
+          <li>Implemented order, payment, and delivery features.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="download-container">
+      <a href="MyResume.pdf" download class="download-btn">📄 Download Resume</a>
+    </div>
+  </main>
+</body>
+</html>

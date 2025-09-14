@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #f1f1f1;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #00eaff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0,234,255,0.7);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: #00eaff;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 35px;
+      color: #00eaff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,234,255,0.4);
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #00eaff;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .card span {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ganesh Chaure</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>My Certifications</h2>
+    <div class="grid">
+      
+      <div class="card">
+        <h3>Java Full Stack Development</h3>
+        <p>Comprehensive certification covering Core Java, Spring Boot, MySQL, HTML, CSS, and JavaScript.</p>
+        <span>Issued by: XYZ Institute | 2025</span>
+      </div>
+
+      <div class="card">
+        <h3>Database Management with MySQL</h3>
+        <p>Hands-on certification on database design, normalization, queries, and integration with Java.</p>
+        <span>Issued by: ABC Training Center | 2024</span>
+      </div>
+
+      <div class="card">
+        <h3>Web Development Essentials</h3>
+        <p>Focused on HTML5, CSS3, and JavaScript for building responsive and interactive websites.</p>
+        <span>Issued by: Online Platform | 2023</span>
+      </div>
+
+      <div class="card">
+        <h3>Problem Solving in Java</h3>
+        <p>Certification earned through solving real-world problems using OOP and data structures in Java.</p>
+        <span>Issued by: Coding Platform | 2023</span>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

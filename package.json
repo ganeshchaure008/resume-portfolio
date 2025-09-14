@@ -1,0 +1,15 @@
+{
+  "name": "resumeportfolio",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^latest",
+    "nodemailer": "^latest",
+    "body-parser": "^latest",
+    "cors": "^latest"
+  }
+}

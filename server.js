@@ -1,6 +1,3 @@
-//tcat pbaw vbzi ksms
-
-
 // server.js
 import express from "express";
 import nodemailer from "nodemailer";
@@ -18,18 +15,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static files (HTML, CSS, JS)
-app.use(express.static(__dirname));
+// Serve all static files from "public" folder
+app.use(express.static(path.join(__dirname, "public")));
 
 // Contact form route
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
 
+  if (!process.env.GMAIL_APP_PASSWORD) {
+    return res.status(500).json({ success: false, message: "Gmail password not set in environment." });
+  }
+
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "chaureganesh518@gmail.com", // Your Gmail
-      pass: "tcat pbaw vbzi ksms"          // Replace with Gmail App Password
+      user: "chaureganesh518@gmail.com",
+      pass: process.env.GMAIL_APP_PASSWORD
     }
   });
 
@@ -52,10 +53,11 @@ app.post("/send", async (req, res) => {
 
 // Default route - serve contact.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "contact.html"));
+  res.sendFile(path.join(__dirname, "public", "contact.html"));
 });
 
-// Start server
-app.listen(5000, () => {
-  console.log("Server running at http://localhost:5000");
+// Use Render-provided port or fallback to 5000
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
